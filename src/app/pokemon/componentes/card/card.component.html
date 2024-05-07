@@ -1,0 +1,32 @@
+<div class="contenedor-pokemon">
+    <div class="Pokemon-card" *ngIf="pokemon">
+        <p id="pokemon-name" [ngStyle]="pokemon.types[0].type.name | pokemon">{{pokemon.name}}</p>
+    
+        <div class="contenedor-img">
+            <div class="img">
+                <img src="{{ pokemon.sprites.front_default}}" alt="imagen_Pokemon" height="300px" width="300px">
+                <p><strong>Especie:</strong> {{ pokemon.species.name }}</p>
+                <strong>Tipos:</strong> <span *ngFor="let type of pokemon.types"> {{ type.type.name }}</span>
+            </div>
+
+           <div class="contenedor-info">
+            <div class="pokemon-info">
+                <p><strong>XP base:</strong> {{ pokemon.base_experience }}</p>
+                <p><strong>Altura: </strong> {{ pokemon.height }}</p>
+                <p><strong>Peso: </strong> {{ pokemon.weight }}</p>
+                <p><strong>Orden: </strong> {{ pokemon.id }}</p>
+            </div>
+    
+            <div class = "pokemon-habilidades">
+                <h3>Habilidades:</h3>
+                <ul>
+                    <li *ngFor="let ability of pokemon.abilities">
+                        {{ability.ability.name}}
+                    </li>
+                </ul>
+            </div>
+           </div> 
+        </div>
+    </div>
+</div>
+

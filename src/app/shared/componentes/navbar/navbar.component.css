@@ -1,0 +1,28 @@
+.contenedor-nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    background-color:darkred;
+    padding: 12px;
+}
+
+.contenedor-nav h1 { 
+    color:white;
+}
+
+.poke-nav button {
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.poke-nav button:hover {
+    background-color: rgb(220, 219, 219);
+    transition: 0.5s;
+}
+
+.poke-nav a{
+    font-weight: bolder;
+    color: darkred;
+    text-decoration: none;
+}

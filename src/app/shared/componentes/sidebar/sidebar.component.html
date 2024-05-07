@@ -1,0 +1,11 @@
+<div class="sidebar">
+    <div class="encabezado">
+        <h1>Lista de Pokemon</h1>
+    </div>
+
+    <div *ngIf="pokemon" class="listaPokemon">
+        <button (click)="irAPokemon(result.name)" *ngFor="let result of pokemon.results">
+                {{result.name}}
+        </button>
+    </div>
+</div>
